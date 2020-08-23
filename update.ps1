@@ -27,7 +27,7 @@ try { Remove-Item $local_source_code_zip_ignore_file }
 catch {}
 try { Remove-Item $local_setup_ignore_file }
 catch {}
-try { Remove-Item $chocolatey_install_ps1  }
+try { Remove-Item $chocolatey_install_ps1 }
 catch {}
 try { Remove-Item $verification_txt }
 catch {}
@@ -61,7 +61,7 @@ $chocolateyinstall_ps1_content = @"
 Install-ChocolateyInstallPackage @packageArgs
 "@
 
-$timestamp = (Get-Date).tostring("yyyy-MM-dd")
+$timestamp = (Get-Date).ToString("yyyy-MM-dd")
 $verification_txt_content = @"
 How to verify the SHA256 checksum of hamsket_setup.exe in Powershell?
 
@@ -77,11 +77,11 @@ As the software maintainer, always replaces the nightly releases without realeas
 the source code for the user in hamsket_source.zip to build the exe and verify the checksum of the generated setup theirselves as well.
 "@
 
-out-file -filepath $chocolatey_install_ps1 -inputobject $chocolateyinstall_ps1_content
-out-file -filepath $verification_txt -inputobject $verification_txt_content
+Out-File -FilePath $chocolatey_install_ps1 -InputObject $chocolateyinstall_ps1_content
+Out-File -FilePath $verification_txt -InputObject $verification_txt_content
 
 # Create .nupkg from .nuspec
-try {Remove-Item *.nupkg}
+try { Remove-Item *.nupkg }
 catch {}
 
 choco pack

@@ -12,7 +12,7 @@ function DownloadFileWithProgress
 
 	begin {
 		$client = New-Object System.Net.WebClient
-		$client.Headers.add('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36')
+		$client.Headers.Add('user-agent','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36')
 		$Global:downloadComplete = $false
 		$eventDataComplete = Register-ObjectEvent $client DownloadFileCompleted `
  			-SourceIdentifier WebClient.DownloadFileComplete `
