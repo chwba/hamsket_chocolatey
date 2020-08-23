@@ -49,13 +49,13 @@ $chocolateyinstall_ps1_content = @"
 `$local_setup_file = Join-Path `$toolsDir 'hamsket_setup.exe'
 
 `$packageArgs = @{
-  packageName    = 'hamsket-nightly'
-  softwareName   = 'Hamsket*'
-  file           = `$local_setup_file
-  fileType       = 'exe'
+  packageName = 'hamsket-nightly'
+  softwareName = 'Hamsket*'
+  file = `$local_setup_file
+  fileType = 'exe'
   validExitCodes = @(0)
-  checksum       = '$sha256'
-  checksumType   = 'sha256'
+  checksum = '$sha256'
+  checksumType = 'sha256'
 }
 
 Install-ChocolateyInstallPackage @packageArgs
