@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hamsket-nightly</id>
+    <version>0.60.6</version>
+    <title>hamsket-nightly (Install)</title>
+    <authors>TheGoddessInari</authors>
+	<owners>peace_of_mind</owners>
+    <projectUrl>https://github.com/TheGoddessInari/hamsket/releases</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/TheGoddessInari/hamsket/cc3398fc1f009dea5832b27f817c7ca6edde2730/resources/Icon.png</iconUrl>
+	<docsUrl>https://github.com/TheGoddessInari/hamsket/wiki</docsUrl>
+	<projectSourceUrl>https://github.com/TheGoddessInari/hamsket</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/TheGoddessInari/hamsket/issues</bugTrackerUrl>
+	<mailingListUrl>https://github.com/TheGoddessInari/hamsket/blob/master/CONTRIBUTING.md</mailingListUrl>
+    <tags>hamsket rambox  multi chat client messenger whatsapp skype telegram discord </tags>
+    <summary>Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one.</summary>
+    <description> This is a much more actively developed, and truly open source fork of Rambox CE. Hamsket was formerly called Rambox-OS. This package always contains the most recent nightly-development release.
+	
+	Hamsket gives you the possibility to add common services many times you need, all in one place. It's perfect for people who work with many services for business and private accounts.
+	
+    Original Rambox by Ramiro Saenz
+    Logo designed by Andriy Yurchenko
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

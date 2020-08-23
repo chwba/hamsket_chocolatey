@@ -1,0 +1,4 @@
+*.nupkg
+*.exe
+/tools/*.exe
+/tools/*.zip
