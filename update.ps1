@@ -50,7 +50,6 @@ $chocolateyinstall_ps1_content = @"
 
 `$packageArgs = @{
   packageName = 'hamsket-nightly'
-  softwareName = 'Hamsket*'
   file = `$local_setup_file
   fileType = 'exe'
   validExitCodes = @(0)
@@ -87,8 +86,7 @@ catch {}
 choco pack
 
 Write-Host "Testing installation.."
-choco uninstall "hamsket-nightly"
-choco install "hamsket-nightly" -fdv -s ".\"
+choco install (Get-ChildItem -Path ".\" -Filter *.nupkg).Name.tostring() -fdv -s ".\"
 $a = New-Object -ComObject wscript.shell
 $intAnswer = $a.popup("Do you want to push the new package now?",0,"",4)
 if ($intAnswer -eq 6) {

@@ -5,7 +5,6 @@ $local_setup_file = Join-Path $toolsDir 'hamsket_setup.exe'
 
 $packageArgs = @{
 	packageName = 'hamsket-nightly'
-	softwareName = 'Hamsket*'
 	file = $local_setup_file
 	fileType = 'exe'
 	validExitCodes = @(0)
