@@ -90,7 +90,7 @@ Write-Host "Testing installation.."
 choco uninstall "hamsket-nightly"
 choco install "hamsket-nightly" -fdv -s ".\"
 $a = New-Object -ComObject wscript.shell
-$intAnswer = $a.popup("Do you want to push the new package now??",0,"",4)
+$intAnswer = $a.popup("Do you want to push the new package now?",0,"",4)
 if ($intAnswer -eq 6) {
 	choco push
 } else {
