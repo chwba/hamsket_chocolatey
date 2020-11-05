@@ -4,12 +4,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $local_setup_file = Join-Path $toolsDir 'hamsket_setup.exe'
 
 $packageArgs = @{
-	packageName = 'hamsket-nightly'
-	file = $local_setup_file
-	fileType = 'exe'
-	validExitCodes = @(0)
-	checksum = '8A76BEFEAE83FDD43A470DFA7074209C307C30C6C2405B1298998CF78C0104C4'
-	checksumType = 'sha256'
+  packageName = 'hamsket-nightly'
+  file = $local_setup_file
+  fileType = 'exe'
+  validExitCodes = @(0)
+  checksum = 'DA8EB4EEC6558AD229A5955787E5E1786A42DB78C467E66E27C22B57C3A0AA91'
+  checksumType = 'sha256'
 }
 
 Install-ChocolateyInstallPackage @packageArgs
