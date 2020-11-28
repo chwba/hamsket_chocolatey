@@ -35,7 +35,7 @@ catch {}
 New-Item -Path $local_source_code_zip_ignore_file -ItemType File
 New-Item -Path $local_setup_ignore_file -ItemType File
 
-$url = "http://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket.Setup.0.6.0.exe"
+$url = "https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket.Setup.0.6.1.exe"
 DownloadFileWithProgress $url $local_setup_file
 DownloadFileWithProgress "https://github.com/TheGoddessInari/hamsket/archive/nightly.zip" $local_source_code_zip
 
@@ -45,7 +45,7 @@ Write-Host $sha256
 $chocolateyinstall_ps1_content = @"
 `$ErrorActionPreference = 'Stop';
 
-`$toolsDir = "`$(Split-Path -parent `$MyInvocation.MyCommand.Definition)"
+`$toolsDir = `$(Split-Path -parent `$MyInvocation.MyCommand.Definition)
 `$local_setup_file = Join-Path `$toolsDir 'hamsket_setup.exe'
 
 `$packageArgs = @{
@@ -86,7 +86,7 @@ catch {}
 choco pack
 
 Write-Host "Testing installation.."
-choco install (Get-ChildItem -Path ".\" -Filter *.nupkg).Name.tostring() -fdv -s ".\"
+choco install hamsket-nightly -fdv -s .
 $a = New-Object -ComObject wscript.shell
 $intAnswer = $a.popup("Do you want to push the new package now?",0,"",4)
 if ($intAnswer -eq 6) {

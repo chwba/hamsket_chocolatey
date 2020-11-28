@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $local_setup_file = Join-Path $toolsDir 'hamsket_setup.exe'
 
 $packageArgs = @{
@@ -8,7 +8,7 @@ $packageArgs = @{
   file = $local_setup_file
   fileType = 'exe'
   validExitCodes = @(0)
-  checksum = 'DA8EB4EEC6558AD229A5955787E5E1786A42DB78C467E66E27C22B57C3A0AA91'
+  checksum = '9A4B8099FB402ED92D360893FC3BE8533A96F526FECA9627F9E3EAB7D8298C8F'
   checksumType = 'sha256'
 }
 

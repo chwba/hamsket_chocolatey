@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hamsket-nightly</id>
-    <version>0.60.7</version>
+    <version>0.6.1</version>
     <title>hamsket-nightly (Install)</title>
     <authors>TheGoddessInari</authors>
 	<owners>peace_of_mind</owners>

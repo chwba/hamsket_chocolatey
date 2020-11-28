@@ -5,8 +5,8 @@ Write-Host $file
 $sha256 = get-filehash $file -Algorithm SHA256  | select -ExpandProperty "Hash"
 Write-Host $sha256
 
-The checksum of the included setup executable is: DA8EB4EEC6558AD229A5955787E5E1786A42DB78C467E66E27C22B57C3A0AA91
-It was downloaded from http://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket.Setup.0.6.0.exe on 2020-11-05.
+The checksum of the included setup executable is: 9A4B8099FB402ED92D360893FC3BE8533A96F526FECA9627F9E3EAB7D8298C8F
+It was downloaded from https://github.com/TheGoddessInari/hamsket/releases/download/nightly/Hamsket.Setup.0.6.1.exe on 2020-11-28.
 
 As the software maintainer, always replaces the nightly releases without realease numbering, I have enclosed
 the source code for the user in hamsket_source.zip to build the exe and verify the checksum of the generated setup theirselves as well.
